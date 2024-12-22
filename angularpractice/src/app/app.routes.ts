@@ -5,5 +5,5 @@ import { AboutComponent } from './about/about.component';
 export const routes: Routes = [
    // { path: '',redirectTo:'/home',pathMatch:'full'},
     {path:'',component:HomeComponent},
-    {path:'About',component:AboutComponent},
+    {path:'About/id',component:AboutComponent},
 ];
