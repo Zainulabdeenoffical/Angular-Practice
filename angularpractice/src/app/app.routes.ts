@@ -1,9 +1,16 @@
-import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './about/about.component'; // Adjust the path as necessary
 
-export const routes: Routes = [
-   // { path: '',redirectTo:'/home',pathMatch:'full'},
-    {path:'',component:HomeComponent},
-    {path:'About/id',component:AboutComponent},
+const routes: Routes = [
+  { path: 'about/:id', component: AboutComponent }, // Define the route with a parameter
+  // Other routes can be defined here
+  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Example redirect
+  { path: '**', redirectTo: '/home' } // Wildcard route for a 404 page
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
