@@ -6,6 +6,8 @@ import { StudentComponent } from "./student/student.component";
   selector: 'app-root',
   imports: [StudentComponent],
   templateUrl: './app.component.html',
+  //inline template
+  //template:'<h1>Hello world</h1>',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
@@ -18,7 +20,9 @@ export class AppComponent {
 
    //HostListner
    @HostListener('click',['$event'])
+   //only call next event 
    show(){
     alert('Hello Zain');
    }
+   //not call next event 
 }
