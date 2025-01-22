@@ -5,10 +5,22 @@ import { StudentComponent } from "./student/student.component";
 @Component({
   selector: 'app-root',
   imports: [StudentComponent],
+  // templaet url high pioraty
   templateUrl: './app.component.html',
   //inline template
   //template:'<h1>Hello world</h1>',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  // InLine CSS
+  //inline css high pioraty
+  //styles:'h1{background-color:yellow;}'
+  //Styles urls for multiplle styles 
+ // styleUrls:[]
+ //not call next event 
+   //preservewhitespacces is used for same as it html structure
+   // if true
+   // rembered deafult strutchure show 
+   //preserveWhitespaces: true
+   //preserveWhitespaces: false
 })
 export class AppComponent {
   title = 'angular19';
@@ -24,5 +36,5 @@ export class AppComponent {
    show(){
     alert('Hello Zain');
    }
-   //not call next event 
+   
 }
