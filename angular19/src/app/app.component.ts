@@ -5,7 +5,7 @@ import { EmployeeComponent } from "./employee/employee.component";
 
 @Component({
   selector: 'app-root',
-  imports: [StudentComponent,EmployeeComponent],
+  imports: [EmployeeComponent],
   // templaet url high pioraty
   templateUrl: './app.component.html',
   //inline template
@@ -28,7 +28,7 @@ import { EmployeeComponent } from "./employee/employee.component";
    // encapsulation:ViewEncapsulation.ShadowDom
     // shadow down is transfered css from parent to child
     // but not child to parent
-    encapsulation: ViewEncapsulation.None
+      //encapsulation: ViewEncapsulation.None
     // Transfered css for child  to parent
     // parent to child both 
     
@@ -37,15 +37,15 @@ export class AppComponent {
   title = 'angular19';
    name = "Zain";
 
-   constructor (){
-    console.log("App Component Constructor");
-   }
+  //  constructor (){
+  //   console.log("App Component Constructor");
+  //  }
 
    //HostListner
-   @HostListener('click',['$event'])
-   //only call next event 
-   show(){
-    alert('Hello Zain');
-   }
+  //  @HostListener('click',['$event'])
+  //  //only call next event 
+  //  show(){
+  //   alert('Hello Zain');
+  //  }
    
 }

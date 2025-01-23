@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-employee',
-  imports: [],
   templateUrl: './employee.component.html',
-  styleUrl: './employee.component.css'
+  styleUrls: ['./employee.component.css'],
+  inputs:['cdata']
+
 })
 export class EmployeeComponent {
-
+cdata:any
 }
