@@ -47,5 +47,10 @@ export class AppComponent {
   //  show(){
   //   alert('Hello Zain');
   //  }
+  cdata:any
+  getdata(data:any)
+  {
+     this.cdata=data;
+  }
    
 }

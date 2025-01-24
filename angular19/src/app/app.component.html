@@ -2,12 +2,16 @@
 <h1>Zain Ul Abideen</h1>
 {{name}}
 <label for="text">Enter you name </label>
-<input type="text" #p (keyup)="0">
+<!-- parent compnoent input type  -->
+<!-- <input type="text" #p (keyup)="0"> -->
+<app-employee (childevent)="getdata($event)"></app-employee>
+ <h1>value of child component:{{cdata}}</h1>
 
 <!-- <button>Hi</button>  <button>zain</button>  <button>ul</button> <button>Abideen</button> -->
 <!-- <app-student></app-student> -->
 <p>This is employee component</p>
-<app-employee [cdata]="p.value"> </app-employee>
+<!-- <app-employee [cdata]="p.value"> </app-employee> -->
+ 
 
 
 </div>
