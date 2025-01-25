@@ -4,14 +4,41 @@
 <label for="text">Enter you name </label>
 <!-- parent compnoent input type  -->
 <!-- <input type="text" #p (keyup)="0"> -->
-<app-employee (childevent)="getdata($event)"></app-employee>
- <h1>value of child component:{{cdata}}</h1>
+<!-- <app-employee (childevent)="getdata($event)"></app-employee>
+ <h1>value of child component:{{cdata}}</h1> -->
 
 <!-- <button>Hi</button>  <button>zain</button>  <button>ul</button> <button>Abideen</button> -->
 <!-- <app-student></app-student> -->
 <p>This is employee component</p>
 <!-- <app-employee [cdata]="p.value"> </app-employee> -->
- 
+ <!-- @if(login)
+ {
+     <b>User is login </b>
+ } -->
 
+<button (click)="logins()">Log in </button>
+<button (click)="logout()">Log out </button>
+<!-- @if (login) {
+<b>user logined</b>
+}
+@if (!login) {
+<b>user logout</b>
+} -->
+ 
+@if (login) {
+    <b>user logined</b>
+}
+@else {
+    <b>user logout</b> 
+}
+@if (age<10) {
+    <b>child</b>
+}
+@else if (age>10 && age <24) {
+    <b> young</b>
+}
+@else {
+    <b>old</b>
+}
 
 </div>

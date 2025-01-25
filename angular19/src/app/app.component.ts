@@ -36,6 +36,8 @@ import { EmployeeComponent } from "./employee/employee.component";
 export class AppComponent {
   title = 'angular19';
    name = "Zain";
+   login = true;
+   age = 20;
 
   //  constructor (){
   //   console.log("App Component Constructor");
@@ -47,10 +49,18 @@ export class AppComponent {
   //  show(){
   //   alert('Hello Zain');
   //  }
-  cdata:any
-  getdata(data:any)
+  // cdata:any
+  // getdata(data:any)
+  // {
+  //    this.cdata=data;
+  // }
+  logins()
   {
-     this.cdata=data;
+    this.login = true
+  }
+  logout()
+  {
+    this.login = false
   }
    
 }
