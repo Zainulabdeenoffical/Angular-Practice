@@ -25,7 +25,7 @@
 <b>user logout</b>
 } -->
  
-@if (login) {
+<!-- @if (login) {
     <b>user logined</b>
 }
 @else {
@@ -39,6 +39,32 @@
 }
 @else {
     <b>old</b>
+} -->
+<!-- @switch (name) {
+    @case ("Zain") {
+        <b>Hello , Zain</b>
+    }
+    @case ("Ali") {
+        <b>Hello , Ali</b>
+    }
+    @case ("Ahmad") {
+        <b>Hello , Ahmad</b>
+    }
+    @case ("Zaid") {
+        <b>Hello , Zaid</b>
+    }
+    @default {
+        <b>No username found </b>
+    }
+} -->
+@for (emp of Employee; track emp.id) {
+<ul>
+    <li>
+        ID = {{emp.id}} <br> name = {{emp.name}}
+    </li>
+</ul>
+}@empty {
+    <b>no data found </b>
 }
 
 </div>

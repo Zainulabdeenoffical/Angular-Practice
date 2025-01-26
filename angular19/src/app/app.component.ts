@@ -5,7 +5,7 @@ import { EmployeeComponent } from "./employee/employee.component";
 
 @Component({
   selector: 'app-root',
-  imports: [EmployeeComponent],
+  imports: [],
   // templaet url high pioraty
   templateUrl: './app.component.html',
   //inline template
@@ -62,5 +62,10 @@ export class AppComponent {
   {
     this.login = false
   }
+  Employee:any[] = [
+    {id:1,name:"Zain"},
+    {id:2,name:"ALi"},
+    {id:3,name:"Ahmad"}
+  ]
    
 }
