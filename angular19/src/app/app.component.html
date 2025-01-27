@@ -18,6 +18,7 @@
 
 <button (click)="logins()">Log in </button>
 <button (click)="logout()">Log out </button>
+<br>
 <!-- @if (login) {
 <b>user logined</b>
 }
@@ -57,7 +58,7 @@
         <b>No username found </b>
     }
 } -->
-@for (emp of Employee; track emp.id) {
+<!-- @for (emp of Employee; track emp.id) {
 <ul>
     <li>
         ID = {{emp.id}} <br> name = {{emp.name}}
@@ -65,6 +66,17 @@
 </ul>
 }@empty {
     <b>no data found </b>
-}
+} -->
+<!-- <div [ngStyle]="{'background-color':myname=='Zain'?'red':'green'}">Ng Style</div> -->
+
+<div *ngFor="let item of EmployeeCountry">
+    <div [ngStyle]="{'background-color': getcolor(item.country)}">
+        Name : {{item.name}}<br>
+        Country : {{item.country}}<br>
+    </div>
+</div>
+
+
+
 
 </div>

@@ -1,71 +1,68 @@
-import { Component, HostListener, ViewEncapsulation } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { StudentComponent } from "./student/student.component";
-import { EmployeeComponent } from "./employee/employee.component";
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  // templaet url high pioraty
+  standalone: true,
+  imports: [CommonModule],
+  // template URL high priority
   templateUrl: './app.component.html',
-  //inline template
-  //template:'<h1>Hello world</h1>',
-  styleUrl: './app.component.css',
+  // inline template
+  // template:'<h1>Hello world</h1>',
+  styleUrls: ['./app.component.css'],
   // InLine CSS
-  //inline css high pioraty
-  //styles:'h1{background-color:yellow;}'
-  //Styles urls for multiplle styles 
- // styleUrls:[]
- //not call next event 
-   //preservewhitespacces is used for same as it html structure
-   // if true
-   // rembered deafult strutchure show 
-   //preserveWhitespaces: true
-   //preserveWhitespaces: false
-   //Emulated encapsualtion not transfered css
-   //  not parent css to child not child to parent
-   //encapsulation:ViewEncapsulation.Emulated
-   // encapsulation:ViewEncapsulation.ShadowDom
-    // shadow down is transfered css from parent to child
-    // but not child to parent
-      //encapsulation: ViewEncapsulation.None
-    // Transfered css for child  to parent
-    // parent to child both 
-    
+  // inline css high priority
+  // styles:'h1{background-color:yellow;}'
+  // Styles urls for multiple styles 
+  // not call next event 
+  // preserveWhitespaces is used for the same as its HTML structure
+  // if true
+  // remembered default structure show 
+  // preserveWhitespaces: true
+  // preserveWhitespaces: false
+  // Emulated encapsulation not transferred css
+  // not parent css to child not child to parent
+  // encapsulation: ViewEncapsulation.Emulated
+  // encapsulation: ViewEncapsulation.ShadowDom
+  // shadow dom is transferred css from parent to child
+  // but not child to parent
+  // encapsulation: ViewEncapsulation.None
+  // Transferred css for child to parent
+  // parent to child both 
 })
 export class AppComponent {
   title = 'angular19';
-   name = "Zain";
-   login = true;
-   age = 20;
+  name = "Zain";
+  login = true;
+  age = 20;
 
-  //  constructor (){
-  //   console.log("App Component Constructor");
-  //  }
+  logins() {
+    this.login = true;
+  }
+  logout() {
+    this.login = false;
+  }
+  Employee: any[] = [
+    { id: 1, name: "Zain" },
+    { id: 2, name: "Ali" },
+    { id: 3, name: "Ahmad" }
+  ];
 
-   //HostListner
-  //  @HostListener('click',['$event'])
-  //  //only call next event 
-  //  show(){
-  //   alert('Hello Zain');
-  //  }
-  // cdata:any
-  // getdata(data:any)
-  // {
-  //    this.cdata=data;
-  // }
-  logins()
-  {
-    this.login = true
+  EmployeeCountry: any[] = [
+    { id: 1, name: "Zain", country: 'Pakistan' },
+    { id: 2, name: "Ali", country: 'India' },
+    { id: 3, name: "Ahmad", country: 'USA' },
+  ];
+
+  getcolor(country: any) {
+    switch (country) {
+      case 'Pakistan':
+        return 'green';
+      case 'India':
+        return 'red';
+      case 'USA':
+        return 'blue';
+    }
+    return null;
   }
-  logout()
-  {
-    this.login = false
-  }
-  Employee:any[] = [
-    {id:1,name:"Zain"},
-    {id:2,name:"ALi"},
-    {id:3,name:"Ahmad"}
-  ]
-   
 }
