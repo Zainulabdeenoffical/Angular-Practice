@@ -69,14 +69,20 @@
 } -->
 <!-- <div [ngStyle]="{'background-color':myname=='Zain'?'red':'green'}">Ng Style</div> -->
 
-<div *ngFor="let item of EmployeeCountry">
+<!-- <div *ngFor="let item of EmployeeCountry">
     <div [ngStyle]="{'background-color': getcolor(item.country)}">
         Name : {{item.name}}<br>
         Country : {{item.country}}<br>
-    </div>
-</div>
+    </div> -->
+<!-- </div> -->
+ <!-- <h2>ng Class with string</h2>
+ <div [ngClass]="'one three'"]> Hello , Zain </div>
 
-
-
-
+ <div *ngFor="let emp of Employee">
+    <div [ngClass]="'one three'"]>
+    name : {{emp.name}}<br>
+    id :: {{emp.id}}<br> -->
+<!-- </div>
+ </div> -->
+ <div [ngClass]="{'one':true,'three': true}">Hello Zain</div>
 </div>
