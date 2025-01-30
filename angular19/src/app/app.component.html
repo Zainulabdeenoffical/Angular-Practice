@@ -81,8 +81,33 @@
  <div *ngFor="let emp of Employee">
     <div [ngClass]="'one three'"]>
     name : {{emp.name}}<br>
-    id :: {{emp.id}}<br> -->
-<!-- </div>
+    id :: {{emp.id}}<br> --> 
+ <!-- </div> -->
+ <!-- </div>  -->
+ <!-- <div [ngClass]="{'one':true,'three': true}">Hello Zain</div> -->
+  <!-- Error handling in Interpolation -->
+   <!-- <h1>Employee</h1>
+   country name : {{country.id}}
+   country id :   {{country.name}}
+   <br> -->
+   <!-- <div *ngFor="let emp of Employee">
+    <div [ngClass]="'one three'"]>
+    name : {{emp && emp.name}}<br>
+    id :: {{ emp && emp.id}}<br> 
  </div> -->
- <div [ngClass]="{'one':true,'three': true}">Hello Zain</div>
+ <h1>Attribute binding</h1>
+ <table border="1">
+    <tr>
+        <td [attr.colspan]="col">Employee name </td>
+    </tr>
+    <tr>
+        <td>first name </td>
+        <td>zain</td>
+    </tr>
+    <tr>
+        <td>last name </td>
+        <td>ul Abideen </td>
+    </tr>
+
+ </table>
 </div>

@@ -53,6 +53,7 @@ export class AppComponent {
     { id: 2, name: "Ali", country: 'India' },
     { id: 3, name: "Ahmad", country: 'USA' },
   ];
+  
 
   getcolor(country: any) {
     switch (country) {
@@ -65,4 +66,10 @@ export class AppComponent {
     }
     return null;
   }
+  country:any[]=[
+    {id:1,name:'Pakistan'},
+    {id:2,name:'India'},
+    {id:3,name:'USA'},
+
+  ];
 }
