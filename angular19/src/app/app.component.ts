@@ -72,4 +72,12 @@ export class AppComponent {
     {id:3,name:'USA'},
 
   ];
+  col = 2;
+  color = "red";
+  classtoapply = "boldclass";
+
+  reg = "FA22-BCS-090"
+
+
+  imagepath = "udemy.png"
 }
