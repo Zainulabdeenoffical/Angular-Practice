@@ -117,7 +117,23 @@
  <br> -->
  <!-- <button [class]="coolorclass" [class]="classtoapply"> Click me </button> -->
   <!-- property binding -->
-   <span [innerHTML]="reg"></span>
+   <!-- <span [innerHTML]="reg"></span>
    <br>
-   <img [src] ="imagepath" alt="C#">
+   <img [src] ="imagepath" alt="C#"> -->
+<!-- <button (click)="enable()">Enabled/Disbaled</button>
+
+   <h3>Interpolation</h3>
+   <button disabled = "{{valuenow }}"> click me </button>
+   <h3>property binding</h3>
+   <button [disabled]="valuenow"> click me </button> -->
+
+   <button (click)="click1()">Click 1 </button>
+
+   <button on-click= "click1()">Click 2 </button>
+
+   Enetr your name <input type="text" #textmsg (keyup)="sentmessage(textmsg.value)">
+
+   <br>
+   your name is :{{_message}}
+
 </div>

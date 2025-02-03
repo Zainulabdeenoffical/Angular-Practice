@@ -35,6 +35,7 @@ export class AppComponent {
   name = "Zain";
   login = true;
   age = 20;
+  _message = "Hello world";
 
   logins() {
     this.login = true;
@@ -80,4 +81,22 @@ export class AppComponent {
 
 
   imagepath = "udemy.png"
+
+  valuenow = true;
+
+  // enable()
+  // {
+  //   this.valuenow = !this.valuenow;
+  // }
+
+
+  click1()
+  {
+    console.log("click fired!");
+  }
+
+  sentmessage(val:any)
+  {
+    this._message=val;
+  }
 }
