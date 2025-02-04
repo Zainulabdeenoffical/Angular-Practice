@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule],
   // template URL high priority
   templateUrl: './app.component.html',
   // inline template
@@ -90,13 +91,13 @@ export class AppComponent {
   // }
 
 
-  click1()
-  {
-    console.log("click fired!");
-  }
+  // click1()
+  // {
+  //   console.log("click fired!");
+  // }
 
-  sentmessage(val:any)
-  {
-    this._message=val;
-  }
+  // sentmessage(val:any)
+  // {
+  //   this._message=val;
+  // }
 }

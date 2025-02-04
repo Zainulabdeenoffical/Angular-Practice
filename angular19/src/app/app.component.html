@@ -127,13 +127,18 @@
    <h3>property binding</h3>
    <button [disabled]="valuenow"> click me </button> -->
 
-   <button (click)="click1()">Click 1 </button>
+   <!-- <button (click)="click1()">Click 1 </button>
 
    <button on-click= "click1()">Click 2 </button>
 
    Enetr your name <input type="text" #textmsg (keyup)="sentmessage(textmsg.value)">
 
    <br>
-   your name is :{{_message}}
+   your name is :{{_message}} -->
+<!-- 
+   two way data binding -->
+   Enter your message <input type="text" [(ngModel)] = "_message">
+   <br>
+   your  message is {{_message}}
 
 </div>
