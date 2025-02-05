@@ -37,6 +37,7 @@ export class AppComponent {
   login = true;
   age = 20;
   _message = "Hello world";
+  zain = "hello i am zain "
 
   logins() {
     this.login = true;
@@ -100,4 +101,15 @@ export class AppComponent {
   // {
   //   this._message=val;
   // }
+
+
+  myinfo =    {Name:"M Zain Ul Abideen",
+      Age: 20,
+      Address: "Sahiwal"
+    }
+
+    curr = 100;
+
+    currentdate = new Date();
+  
 }

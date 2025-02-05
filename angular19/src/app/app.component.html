@@ -137,8 +137,46 @@
    your name is :{{_message}} -->
 <!-- 
    two way data binding -->
-   Enter your message <input type="text" [(ngModel)] = "_message">
+   <!-- Enter your message <input type="text" [(ngModel)] = "_message">
    <br>
-   your  message is {{_message}}
+   your  message is {{_message}} -->
+
+   <h1>pipe line</h1>
+   {{name}} <br>
+   {{name | lowercase}} <br>
+   {{name | uppercase}} <br>
+   {{name | titlecase}} <br>
+   <br>
+   remeber space count  in slice 
+   {{zain | slice :5}}
+   <br>
+   {{zain | slice :5:10}} <br>
+
+ Name :  {{myinfo.Name}} <br>
+   Age : {{myinfo.Age}} <br>
+   <br>
+
+   {{myinfo | json}}
+   
+   Decimal and perctage pipelines
+   <br>
+   {{30.1234535}} <br>
+   {{30.1234535 | number}} <br>
+   {{30.1234535 | number :'2.3-6'}} <br>
+
+   <br>
+   {{2.16 | percent}} <br>
+   {{2.16 | percent :'2.2-2'}} <br>
+
+   {{curr | currency}} <br>
+   {{curr | currency :'INR'}} <br>
+   {{curr | currency :'INR' : true :'3.2-5'}} <br>
+   <br>
+   <h1>{{currentdate}}</h1>
+   <h1>{{currentdate | date}}</h1>
+   <h1>{{currentdate | date:'shortDate'}}</h1>
+   <h1>{{currentdate | date:'longDate'}}</h1>
+   <h1>{{currentdate | date:'fullDate'}}</h1>
+
 
 </div>
