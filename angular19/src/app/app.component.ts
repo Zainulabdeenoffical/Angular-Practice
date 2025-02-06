@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { WelcomePipe } from './welcome.pipe';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,WelcomePipe],
   // template URL high priority
   templateUrl: './app.component.html',
   // inline template
