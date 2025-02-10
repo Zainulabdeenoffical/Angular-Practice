@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { WelcomePipe } from './welcome.pipe';
+import { ZainservicesService } from './zainservices.service';
+import { Comp1Component } from "./comp1/comp1.component";
+import { Comp2Component } from "./comp2/comp2.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,FormsModule,WelcomePipe],
+  imports: [CommonModule, FormsModule, WelcomePipe,Comp1Component,Comp2Component],
   // template URL high priority
   templateUrl: './app.component.html',
   // inline template
@@ -111,6 +114,12 @@ export class AppComponent {
 
     curr = 100;
 
-    currentdate = new Date();
+//     currentdate = new Date();
+
+//   data1:string;
+
+// constructor (private zainService: ZainservicesService){
+// this.data1=this.zainService.myservices();
+//     }
   
 }
