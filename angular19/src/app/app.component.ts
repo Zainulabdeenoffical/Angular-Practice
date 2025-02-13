@@ -5,11 +5,12 @@ import { WelcomePipe } from './welcome.pipe';
 import { ZainservicesService } from './zainservices.service';
 import { Comp1Component } from "./comp1/comp1.component";
 import { Comp2Component } from "./comp2/comp2.component";
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule, WelcomePipe,Comp1Component,Comp2Component],
+  imports: [CommonModule, FormsModule, WelcomePipe, Comp1Component, Comp2Component, RouterOutlet,RouterLink],
   // template URL high priority
   templateUrl: './app.component.html',
   // inline template
@@ -121,5 +122,8 @@ export class AppComponent {
 // constructor (private zainService: ZainservicesService){
 // this.data1=this.zainService.myservices();
 //     }
+
+
+
   
 }
