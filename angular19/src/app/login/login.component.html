@@ -1,0 +1,18 @@
+<h3>login form</h3>
+<table>
+    <tr>
+        <td> username :</td>
+        <td> <input type="text" #userid>
+        </td>
+    </tr>
+
+    <tr>
+        <td> passsword :</td>
+        <td> <input type="password" #passwordid>
+        </td>
+    </tr>
+    <tr>
+        
+    <button (click)="login(userid.value,passwordid.value)">login</button>
+    </tr>
+</table>
