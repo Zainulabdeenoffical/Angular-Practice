@@ -3,3 +3,7 @@ h1{
     background-color: brown;
     color: white;
 }
+.active {
+    background-color: blue;
+    color : red;
+}

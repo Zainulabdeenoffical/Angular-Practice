@@ -5,12 +5,12 @@ import { WelcomePipe } from './welcome.pipe';
 import { ZainservicesService } from './zainservices.service';
 import { Comp1Component } from "./comp1/comp1.component";
 import { Comp2Component } from "./comp2/comp2.component";
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule, WelcomePipe, Comp1Component, Comp2Component, RouterOutlet,RouterLink],
+  imports: [CommonModule, FormsModule, WelcomePipe, Comp1Component, Comp2Component, RouterOutlet,RouterLink,RouterLinkActive],
   // template URL high priority
   templateUrl: './app.component.html',
   // inline template
