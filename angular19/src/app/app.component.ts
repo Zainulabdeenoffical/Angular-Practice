@@ -6,11 +6,14 @@ import { ZainservicesService } from './zainservices.service';
 import { Comp1Component } from "./comp1/comp1.component";
 import { Comp2Component } from "./comp2/comp2.component";
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Zain1Component } from "./zain1/zain1.component";
+import { Zain2Component } from "./zain2/zain2.component";
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule, WelcomePipe, Comp1Component, Comp2Component, RouterOutlet,RouterLink,RouterLinkActive],
+  imports:[CommonModule, FormsModule, WelcomePipe, Comp1Component, Comp2Component, RouterOutlet, RouterLink, RouterLinkActive,Zain1Component, Zain2Component],
   // template URL high priority
   templateUrl: './app.component.html',
   // inline template
@@ -124,6 +127,22 @@ export class AppComponent {
 //     }
 
 
+//  constructor()
+//  {
+// if(window.localStorage){
+// alert("supported");
 
+// }
+// else{
+//   alert("not supported please update ur chrome ")
+// }
+
+//  }]
+
+// constructor()
+// {
+//   localStorage.setItem("userid","Zain")
+//   sessionStorage.setItem("employeid","Abdullah")
+// }
   
 }
