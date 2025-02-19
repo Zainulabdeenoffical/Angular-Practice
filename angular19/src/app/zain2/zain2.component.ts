@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-zain2',
@@ -7,10 +8,24 @@ import { Component } from '@angular/core';
   styleUrl: './zain2.component.css'
 })
 export class Zain2Component {
-  getdata()
+  // getdata()
+  // {
+  //   console.log(localStorage.getItem("name"))
+  // console.log(localStorage.getItem("Zain"))
+  // }
+
+  constructor( private _cookies: CookieService) 
   {
-    console.log(localStorage.getItem("name"))
-  console.log(localStorage.getItem("Zain"))
-  }
+
+
+   }
+   getcookies()
+   {
+    console.log(this._cookies.get('username'))
+    console.log(this._cookies.get('empid'))
+
+   }
+
+
 
 }
