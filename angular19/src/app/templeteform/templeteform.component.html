@@ -1,0 +1,21 @@
+<h1>Regestartion Form </h1>
+<div>
+    <form #regform ="ngForm" (ngSubmit)="register(regform)">
+<div>
+    <input type="text" placeholder="First Name" name="fname" ngModel >
+</div>
+<div>
+    <input type="text" placeholder="Last Name" name="lname" ngModel >
+</div>
+<div>
+    <input type="email" placeholder="Email Address" name="emid" ngModel >
+</div>
+<div>
+    <input type="password" placeholder="password" name="pass" ngModel >
+</div>
+<div>
+    <input type="submit" value="register"> 
+</div>
+
+    </form>
+</div>

@@ -8,12 +8,14 @@ import { Comp2Component } from "./comp2/comp2.component";
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { Zain1Component } from "./zain1/zain1.component";
 import { Zain2Component } from "./zain2/zain2.component";
+import { TempleteformComponent } from "./templeteform/templeteform.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports:[CommonModule,FormsModule, WelcomePipe, Comp1Component, Comp2Component, RouterOutlet, RouterLink, RouterLinkActive,Zain1Component, Zain2Component],
+  imports: [CommonModule, FormsModule, WelcomePipe, Comp1Component, Comp2Component, RouterOutlet, RouterLink, RouterLinkActive, Zain1Component, Zain2Component,
+    TempleteformComponent],
   // template URL high priority
   templateUrl: './app.component.html',
   // inline template
