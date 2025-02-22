@@ -2,19 +2,32 @@
 <div>
     <form #regform ="ngForm" (ngSubmit)="register(regform)">
 <div>
-    <input type="text" placeholder="First Name" name="fname" ngModel >
+    <input type="text" placeholder="First Name" required name="fname" ngModel #fname="ngModel" >
+<span *ngIf=" fname.touched   &&  fname.valid">
+  First name required !!
+</span>
+
 </div>
 <div>
-    <input type="text" placeholder="Last Name" name="lname" ngModel >
+    <input type="text" placeholder="Last Name" required name="lname" ngModel  #lname="ngModel">
+    <span  *ngIf=" lname.touched  &&  lname.valid">
+        First name required !!
+      </span>
 </div>
 <div>
-    <input type="email" placeholder="Email Address" name="emid" ngModel >
+    <input type="email" placeholder="Email Address"  required   name="emid" ngModel  #email="ngModel" >
+    <span *ngIf=" email.touched   &&  email.valid">
+        First name required !!
+      </span>
 </div>
 <div>
-    <input type="password" placeholder="password" name="pass" ngModel >
+    <input type="password" placeholder="password"   required      name="pass" ngModel    #pass="ngModel">
+    <span *ngIf=" pass.touched   &&  pass.valid">
+        First name required !!
+      </span>
 </div>
 <div>
-    <input type="submit" value="register"> 
+    <input type="submit" value="register" [disabled]="regform.invalid" > 
 </div>
 
     </form>

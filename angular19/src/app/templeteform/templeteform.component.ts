@@ -1,9 +1,11 @@
+import { CommonModule } from '@angular/common';
+import { Comment } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-templeteform',
-  imports: [FormsModule],
+  imports: [FormsModule,CommonModule],
   templateUrl: './templeteform.component.html',
   styleUrls: ['./templeteform.component.css']
 })
