@@ -4,21 +4,43 @@
         <div>
             <label for="fname">First Name</label>
             <input id="fname" type="text" placeholder="First Name" formControlName="fname">
+            <div *ngIf="regForm.controls['fname'].touched && !regForm.controls['fname'].valid">
+                First name is Required 
+          </div>
         </div>
         <div>
             <label for="lname">Last Name</label>
             <input id="lname" type="text" placeholder="Last Name" formControlName="lname">
+            <div *ngIf="regForm.controls['fname'].touched && !regForm.controls['fname'].valid">
+                last  name is Required 
+          </div>
         </div>
         <div>
             <label for="email">Email</label>
             <input id="email" type="email" placeholder="Email Address" formControlName="email">
+            <div *ngIf="regForm.controls['email'].touched && !regForm.controls['email'].valid">
+                <span *ngIf="regForm.controls['email'].hasError('Required')"> 
+
+                E mail is Required 
+                </span>
+            <span *ngIf="regForm.controls['email'].hasError('email')">
+                Email  correct it </span>
+
+            
+
+          </div>
         </div>
         <div>
             <label for="ph">Phone Number</label>
             <input id="ph" type="number" placeholder="Phone Number" formControlName="ph">
+            <div *ngIf="regForm.controls['ph'].touched && !regForm.controls['ph'].valid">
+                phone number is Required 
+          </div>
         </div>
         <div>
             <button type="submit">Register</button>
+            <button type="reset"> Cancel</button>
+            <button  (click)="rest()"> Cancel2</button>
         </div>
     </form>
 </div>
