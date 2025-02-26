@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactiveform',
@@ -41,6 +41,44 @@ regForm!:FormGroup;
       ph : ['',[Validators.required]]
 
   })
+ 
+  // this.regForm.get('email')?.valueChanges.subscribe(first_name=>
+  
+  //   {
+  //     console.log('first name current  value is '+first_name)
+  //   }
+  
+  // )
+
+    // this.regForm.valueChanges.subscribe(FormData=>{
+    //   console.log("first name is" +FormData.fname)
+    //   console.log("last name is" +FormData.lname)
+    //   console.log("email is" +FormData.email)
+    //   console.log("phone number is" +FormData.ph)
+
+    // })
+
+// this.regForm.statusChanges.subscribe(firstnamestatuscheck=>{
+//   console.log("first name status is "+firstnamestatuscheck)
+// })
+
+// this.regForm.statusChanges.subscribe(fromdata=>{
+//   console.log("full form  Status check : "+fromdata)
+// })
+
+let arr = new FormArray([
+  new FormControl('M Zain Ul Abideen'),
+  new FormControl('zzzz'),
+
+])
+console.log(arr.value)
+console.log(arr.valid)
+
+// after result values in array
+arr.reset()
+console.log(arr.value)
+console.log(arr.valid)
+
  }
 
  register(Formdata:FormGroup)
@@ -59,5 +97,26 @@ regForm!:FormGroup;
   })
  }
 
+ setdata()
+ {
+  // this.regForm.setValue(
+  //   {
+  //     id:100,
+  //     fname:'Zain',
+  //     lname:'Ul Abideen',
+  //     email:'zu4425@gmail.com',
+  //     ph:"03258509789"
+  //   }
+  // )
+  this.regForm.patchValue(
+    {
+      //id:100,
+      fname:'Zain',
+      lname:'Ul Abideen',
+      email:'zu4425@gmail.com',
+      ph:"03258509789"
+    }
+  )
+ }
 
 }
