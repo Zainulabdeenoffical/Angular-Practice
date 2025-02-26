@@ -10,8 +10,9 @@ import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Va
   styleUrl: './reactiveform.component.css'
 })
 export class ReactiveformComponent {
+  index: number = 0; // Added index property for template usage and initialized it
 
-regForm!:FormGroup;
+regForm!:any;
  constructor( private  _fb:FormBuilder)
  {
 
@@ -38,7 +39,11 @@ regForm!:FormGroup;
       fname:['',[ Validators.required]],
       lname : ['',[ Validators.required]],
       email : ['' ,[Validators.required,Validators.email]],
-      ph : ['',[Validators.required]]
+      // ph : ['',[Validators.required]]
+
+    phonenumber: new FormArray([
+      new FormControl('', Validators.required),
+    ])
 
   })
  
@@ -117,6 +122,21 @@ console.log(arr.valid)
       ph:"03258509789"
     }
   )
+ }
+
+ deletbtn(val:any)
+ {
+
+   this.regForm.get('phonenumber').removeAt('val');
+
+ }
+
+ addmore()
+ {
+
+this.regForm.get('phonenumber').push( new FormData());
+
+
  }
 
 }

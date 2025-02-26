@@ -6,41 +6,42 @@
             <input id="fname" type="text" placeholder="First Name" formControlName="fname">
             <div *ngIf="regForm.controls['fname'].touched && !regForm.controls['fname'].valid">
                 First name is Required 
-          </div>
+            </div>
         </div>
         <div>
             <label for="lname">Last Name</label>
             <input id="lname" type="text" placeholder="Last Name" formControlName="lname">
-            <div *ngIf="regForm.controls['fname'].touched && !regForm.controls['fname'].valid">
-                last  name is Required 
-          </div>
+            <div *ngIf="regForm.controls['lname'].touched && !regForm.controls['lname'].valid">
+                Last name is Required 
+            </div>
         </div>
         <div>
             <label for="email">Email</label>
             <input id="email" type="email" placeholder="Email Address" formControlName="email">
             <div *ngIf="regForm.controls['email'].touched && !regForm.controls['email'].valid">
-                <span *ngIf="regForm.controls['email'].hasError('Required')"> 
-
-                E mail is Required 
+                <span *ngIf="regForm.controls['email'].hasError('required')"> 
+                    Email is Required 
                 </span>
-            <span *ngIf="regForm.controls['email'].hasError('email')">
-                Email  correct it </span>
-
-            
-
-          </div>
+                <span *ngIf="regForm.controls['email'].hasError('email')">
+                    Email is not valid
+                </span>
+            </div>
         </div>
-        <div>
+        <div formArrayName="phonenumber">
             <label for="ph">Phone Number</label>
-            <input id="ph" type="number" placeholder="Phone Number" formControlName="ph">
-            <div *ngIf="regForm.controls['ph'].touched && !regForm.controls['ph'].valid">
-                phone number is Required 
-          </div>
+            <div *ngFor="let phone of regForm.get('phonenumber').controls; let i = index">
+                <input id="ph" type="number" placeholder="Phone Number" [formControlName]="i">
+                <button (click)="deletbtn(i)">Delete</button>
+                <div *ngIf="phone.touched && !phone.valid">
+                    Phone number is Required 
+                </div>
+            </div>
+            <button (click)="addmore()">Add more</button>
         </div>
         <div>
             <button type="submit">Register</button>
             <button type="reset"> Cancel</button>
-            <button  (click)="rest()"> Cancel2</button>
+            <button (click)="rest()"> Reset</button>
             <button (click)="setdata()"> Fill Data</button>
         </div>
     </form>
